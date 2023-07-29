@@ -10,7 +10,7 @@ import random
 from open import Open
 from wakeup import WakeupDetected
 
-import time
+import time,sys
 
 def speak_response(text):
     speak(text)
@@ -27,35 +27,41 @@ def process_command():
                 speak(random.choice(responses))
                 if "goodbye" in tag :
                      speak("Goodbye!")
-                     SystemExit
+                     sys.exit()
+                    
 
                 
         else:
                 speak(random.choice(responses))
                 Open(tag)
-                
+    else:
+         speak(Qreply(command))
+                    
 def on_enter_pressed(event):
     process_command()
 
 def start_jarvis():
     speak("Hello sir, I am Jarvis.")
+    tag_2 = ["tell me ","diffrence","similarities", "about",'how','find', "information ","compare","why","where ","when","question","answer"]
     while True:
         data = Mic() # Replace this with your audio input mechanism
         data = str(data).replace(".", "")
 
-        if "stop" in data or "exit" in data:
-            speak("Goodbye!")
-            break
-        elif len(data) <= 3:
+        
+        if len(data) <= 3:
             pass
-        elif "what is" in data or "where" in data or "question" in data or "answer" in data:
-            speak(Qreply(data))
+    
+        elif any(tag in data for tag in tag_2):
+            speak(Qreply(data))   
         else:
-            # Use intent prediction function from intent_prediction.py to get a response
             tag, responses = predict_intent_response(data)
             tag_list = ["greet", "goodbye", "fallback", "about","help","thanks"]
             if any(tag in tag_list for tag in tag):
                 speak(random.choice(responses))
+                if "goodbye" in tag:
+                    
+                     sys.exit()
+                     break
             else:
                 speak(random.choice(responses))
                 Open(tag)
@@ -65,12 +71,10 @@ def start_voice_assistant():
     command_entry.delete(0, tk.END)
     command_entry.focus()
 
-    # Start JARVIS in a separate thread to keep the GUI responsive
+    
     jarvis_thread = threading.Thread(target=start_jarvis)
     jarvis_thread.start()
 
-    # After processing, enable the voice_button again
-    # The following loop waits for the JARVIS thread to finish
     while jarvis_thread.is_alive():
         time.sleep(0.1)
     
@@ -94,4 +98,9 @@ voice_button = tk.Button(app, text="Voice Assistant", command=start_voice_assist
 voice_button.pack()
 
 if __name__ == "__main__":
-    app.mainloop()
+    if WakeupDetected():
+        print("Wake-up phrase detected")
+        app.mainloop()
+    else:
+        print("Wake-up phrase not detected")
+        
