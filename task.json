@@ -1,0 +1,126 @@
+{
+    "intents":[
+        {
+            "tag":"vscode",
+            "patterns":["open vscode","launch","visit", "start vscode", "run vscode"],
+            "responses":["Opening Visual Studio Code.", "Sure, launching Visual Studio Code.", "Here is Visual Studio Code."]
+        },
+        {
+            "tag":"chrome",
+            "patterns":["open chrome","launch chrome","visit site", "start chrome", "run chrome"],
+            "responses":["Opening Google Chrome.", "Sure, launching Google Chrome.", "Here is Google Chrome."]
+        },
+        {
+            "tag":"cmd",
+            "patterns":["open cmd","launch cmd","open command prompt", "start cmd", "run cmd"],
+            "responses":["Opening Command Prompt.", "Sure, launching Command Prompt.", "Here is Command Prompt."]
+        },
+        {
+            "tag":"calculator",
+            "patterns":["open calculator","launch calculator","calculator", "start calculator", "run calculator"],
+            "responses":["Opening Calculator.", "Sure, launching Calculator.", "Here is Calculator."]
+        },
+        {
+            "tag":"notepad",
+            "patterns":["open notepad","launch notepad","notepad", "start notepad", "run notepad"],
+            "responses":["Opening Notepad.", "Sure, launching Notepad.", "Here is Notepad."]
+        },
+        {
+            "tag":"calendar",
+            "patterns":["open calendar","launch calendar","calendar", "start calendar", "run calendar"],
+            "responses":["Opening Calendar.", "Sure, launching Calendar.", "Here is Calendar."]
+        },
+        {
+            "tag":"email",
+            "patterns":["open email","launch email","email client", "start email", "run email"],
+            "responses":["Opening Email.", "Sure, launching Email .", "Here is Email."]
+        },
+        {
+            "tag":"file_explorer",
+            "patterns":["open file explorer","launch file explorer","file explorer", "start file explorer", "run file explorer"],
+            "responses":["Opening File Explorer.", "Sure, launching File Explorer.", "Here is File Explorer."]
+        },
+        {
+            "tag":"music_player",
+            "patterns":["open music player","launch music player","music player", "start music player", "run music player"],
+            "responses":["Opening Music Player.", "Sure, launching Music Player.", "Here is Music Player."]
+        },
+        {
+            "tag":"video_player",
+            "patterns":["open video player","launch video player","video player", "start video player", "run video player"],
+            "responses":["Opening Video Player.", "Sure, launching Video Player.", "Here is Video Player."]
+        },
+        {
+            "tag":"search",
+            "patterns":["search", "look up", "find", "search for", "look up for", "find for"],
+            "responses":["Sure, what would you like me to search for?"]
+        },
+        {
+            "tag":"time",
+            "patterns":["what's the time", "tell me the time", "current time", "what time is it"],
+            "responses":["The current time is ."]
+        },
+        {
+            "tag":"date",
+            "patterns":["what's the date", "tell me the date", "current date", "what date is it"],
+            "responses":["Today's date is ."]
+        },
+        {
+            "tag":"greets",
+            "patterns":["hello","hii","hey", "hi there", "greetings", "howdy"],
+            "responses":["Hello Sir :)",
+                "Hey, I Was Really Waiting For Your Presence.",
+                "Hey, I Was Literally Waiting For Your Presence.",
+                "Hey, I Was Waiting For Your Presence.",
+                "Hey, I Was Waiting For You.",
+                "Hello, I Was Waiting For You.",
+                "Hello Sir. Nice Meeting You Again.",
+                "Hello Sir. Nice To Meet You.",
+                "Hello.",
+                "Hey What's Up Sir."
+            ]
+        },
+        {
+            "tag":"goodbye",
+            "patterns":["bye", "goodbye", "see you later", "farewell", "take care"],
+            "responses":["Goodbye! Have a great day!",
+                "See you later!",
+                "Farewell, take care!",
+                "Goodbye! It was nice chatting with you.",
+                "Until next time. Goodbye!"]
+        },
+        {
+            "tag":"thanks",
+            "patterns":["thank you", "thanks", "thanks a lot", "thank you so much"],
+            "responses":["You're welcome!",
+                "No problem, happy to help!",
+                "You're welcome! If you have more questions, feel free to ask.",
+                "Glad I could assist you!",
+                "Anytime!"]
+        },
+        {
+            "tag":"about",
+            "patterns":["who are you", "what can you do", "tell me about yourself", "what's your purpose"],
+            "responses":["I am your friendly AI assistant here to help you with any questions or tasks you have.",
+                "I'm an AI language model designed to assist and provide information.",
+                "I'm an AI designed to make your life easier by answering your questions and helping with various tasks.",
+                "I am ChatGPT, an AI language model capable of natural language understanding and generation."]
+        },
+        {
+            "tag":"help",
+            "patterns":["help", "what can you help with", "need assistance", "what are your capabilities"],
+            "responses":["Of course! I can assist you with a wide range of topics, such as answering questions, providing information, setting reminders, and more. Just ask away!",
+                "Sure, I'm here to help! Just let me know what you need assistance with.",
+                "I'm here to assist you in any way I can. Feel free to ask me anything!",
+                "I can help you with various tasks and answer your questions. Feel free to ask for anything you need."]
+        },
+        {
+            "tag":"fallback",
+            "patterns":[],
+            "responses":["I'm sorry, but I'm not sure I understand. Could you please rephrase your question?",
+                "Apologies, I couldn't grasp the meaning of that. Could you try asking in a different way?",
+                "I'm still learning, and I might not have the answer to that. Can you ask me something else?",
+                "Oops, I'm not trained on that specific topic. Can you try asking something else?"]
+        }
+    ]
+}
