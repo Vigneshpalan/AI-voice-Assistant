@@ -23,10 +23,10 @@ To run the JARVIS Voice Assistant, you need to install the following dependencie
 2. Install the required dependencies using the instructions provided above.
 3. Run the `jarvis.py or main.py or maingui.py` script using the following command:
 
-4. Press the Enter key to activate the voice assistant.
+4. Press the Enter key to activate the voice assistant(this is for maingui.py).
 5. Start giving voice commands to JARVIS. It will listen for commands after you press Enter.
 6. To exit the voice assistant, simply say "exit."
-
+if you use jarvis.py or main.py u have to say wake up a activation command and clap after saying the comand to activate it 
 ## Note
 -makes use of a intent recognzing model
 - JARVIS uses the English language for command recognition and response. However, you can speak in your preferred language, and JARVIS will translate it to English before processing.
