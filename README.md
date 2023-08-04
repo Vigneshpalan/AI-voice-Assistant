@@ -36,10 +36,9 @@ Move the shortcut you created in step 1 to the "Startup" folder.
 
 Now, every time you start your laptop, the Python script will be executed automatically, and your GUI application will launch.
 
-4.  run the code then you  have to say wake up a activation command .after saying the comand to activate it Press the Voice Assistant  key to give command using voice .
+4.  run the code then you  have to say "wake up" a activation command .after saying the comand to activate it Press the Voice Assistant  key to give command using voice .
 5. Start giving voice commands to JARVIS. It will listen for commands after you press Enter.
-6. To exit the voice assistant, simply say "goodbye".
-7. you open other application using JARVIS
+6. you open other application using JARVIS
 
 ## Note
  -makes use of a intent recognzing model
