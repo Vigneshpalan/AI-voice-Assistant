@@ -19,8 +19,9 @@ def speak_response(text):
 def process_command():
     command = command_entry.get().strip()
     command_entry.delete(0, tk.END)
-
+    tag_2 = ["tell me ","diffrence","similarities", "about",'how','find', "information ","compare","why","where ","when","question","answer"]
     if command:
+      
         tag, responses = predict_intent_response(command)
         tag_list = ["greet", "goodbye", "fallback", "about","help","thanks"]
         if any(tag in tag_list for tag in tag):
@@ -34,8 +35,10 @@ def process_command():
         else:
                 speak(random.choice(responses))
                 Open(tag)
-    else:
+    elif any(tag in command for tag in tag_2):
          speak(Qreply(command))
+    else:
+        pass      
                     
 def on_enter_pressed(event):
     process_command()
@@ -61,7 +64,7 @@ def start_jarvis():
                 if "goodbye" in tag:
                     
                      sys.exit()
-                     break
+                     
             else:
                 speak(random.choice(responses))
                 Open(tag)
